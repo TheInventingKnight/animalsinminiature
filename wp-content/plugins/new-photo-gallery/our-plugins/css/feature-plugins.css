@@ -33,7 +33,7 @@
 }
 
 .gallery_icon {
-    background: url(https://https://theinventingknight.github.io/animalsinminiature/wp-content/plugins/new-photo-gallery/our-plugins/images/icon.png) no-repeat top left;
+    background: url(https://theinventingknight.github.io/animalsinminiature//wp-content/plugins/new-photo-gallery/our-plugins/images/icon.png) no-repeat top left;
     display: inline-block;
     height: 16px;
     margin: 0 2px 0 0;
@@ -1626,23 +1626,23 @@ paging_full_numbers {
 }
 
 .sorting {
-    background: url('https://https://theinventingknight.github.io/animalsinminiature/wp-content/plugins/new-photo-gallery/our-plugins/images/tables/sort_both.png') no-repeat 100% 8px;
+    background: url('https://theinventingknight.github.io/animalsinminiature//wp-content/plugins/new-photo-gallery/our-plugins/images/tables/sort_both.png') no-repeat 100% 8px;
 }
 
 .sorting_asc {
-    background: url('https://https://theinventingknight.github.io/animalsinminiature/wp-content/plugins/new-photo-gallery/our-plugins/images/tables/sort_asc.png') no-repeat 100% 8px;
+    background: url('https://theinventingknight.github.io/animalsinminiature//wp-content/plugins/new-photo-gallery/our-plugins/images/tables/sort_asc.png') no-repeat 100% 8px;
 }
 
 .sorting_desc {
-    background: url('https://https://theinventingknight.github.io/animalsinminiature/wp-content/plugins/new-photo-gallery/our-plugins/images/tables/sort_desc.png') no-repeat 100% 8px;
+    background: url('https://theinventingknight.github.io/animalsinminiature//wp-content/plugins/new-photo-gallery/our-plugins/images/tables/sort_desc.png') no-repeat 100% 8px;
 }
 
 .sorting_asc_disabled {
-    background: url('https://https://theinventingknight.github.io/animalsinminiature/wp-content/plugins/new-photo-gallery/our-plugins/images/tables/sort_asc_disabled.png') no-repeat 100% 8px;
+    background: url('https://theinventingknight.github.io/animalsinminiature//wp-content/plugins/new-photo-gallery/our-plugins/images/tables/sort_asc_disabled.png') no-repeat 100% 8px;
 }
 
 .sorting_desc_disabled {
-    background: url('https://https://theinventingknight.github.io/animalsinminiature/wp-content/plugins/new-photo-gallery/our-plugins/images/tables/sort_desc_disabled.png') no-repeat 100% 8px;
+    background: url('https://theinventingknight.github.io/animalsinminiature//wp-content/plugins/new-photo-gallery/our-plugins/images/tables/sort_desc_disabled.png') no-repeat 100% 8px;
 }
 
 .table.dataTable th:active {

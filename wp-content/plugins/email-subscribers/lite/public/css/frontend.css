@@ -3,7 +3,7 @@
     color: #A8A8A8 !important;
     text-decoration: none;
 }
-.ig_cta_overlay{width: 100%; height: 100%; top: 0; left: 0; background: #E6E6E6; z-index: 1000000; position: fixed; opacity: 0.5; } .ig_cta_spinner{background : url('https://https://theinventingknight.github.io/animalsinminiature/wp-content/plugins/email-subscribers/lite/public/images/spinner-2x.gif') no-repeat no-repeat center; height: 100%; }
+.ig_cta_overlay{width: 100%; height: 100%; top: 0; left: 0; background: #E6E6E6; z-index: 1000000; position: fixed; opacity: 0.5; } .ig_cta_spinner{background : url('https://theinventingknight.github.io/animalsinminiature//wp-content/plugins/email-subscribers/lite/public/images/spinner-2x.gif') no-repeat no-repeat center; height: 100%; }
 
 /* Make border none for all buttons under icegram, to have our style */
 /*todo :test this and check with all wp themes and icegram themes*/
