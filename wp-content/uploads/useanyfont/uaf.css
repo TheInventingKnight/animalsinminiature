@@ -1,0 +1,13 @@
+				@font-face {
+					font-family: 'momo-signiture';
+					src: url('https://https://theinventingknight.github.io/animalsinminiature/wp-content/uploads/useanyfont/1439Momo-Signiture.woff2') format('woff2'),
+						url('https://https://theinventingknight.github.io/animalsinminiature/wp-content/uploads/useanyfont/1439Momo-Signiture.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.momo-signiture{font-family: 'momo-signiture' !important;}
+
+						h1{
+					font-family: 'momo-signiture' !important;
+				}
+		
