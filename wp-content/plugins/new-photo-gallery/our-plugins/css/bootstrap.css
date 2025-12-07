@@ -241,8 +241,8 @@ th {
     border: 1px solid #ddd !important; } }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("https://theinventingknight.github.io/animalsinminiature//wp-content/plugins/new-photo-gallery/our-plugins/fonts/bootstrap/glyphicons-halflings-regular.html");
-  src: url("https://theinventingknight.github.io/animalsinminiature//wp-content/plugins/new-photo-gallery/our-plugins/fonts/bootstrap/glyphicons-halflings-regulard41d.html#iefix") format("embedded-opentype"), url("https://theinventingknight.github.io/animalsinminiature//wp-content/plugins/new-photo-gallery/our-plugins/fonts/bootstrap/glyphicons-halflings-regular-2.html") format("woff"), url("https://theinventingknight.github.io/animalsinminiature//wp-content/plugins/new-photo-gallery/our-plugins/fonts/bootstrap/glyphicons-halflings-regular-3.html") format("truetype"), url("https://theinventingknight.github.io/animalsinminiature//wp-content/plugins/new-photo-gallery/our-plugins/fonts/bootstrap/glyphicons-halflings-regular-4.html#glyphicons_halflingsregular") format("svg"); }
+  src: url("/animalsinminiature/wp-content/plugins/new-photo-gallery/our-plugins/fonts/bootstrap/glyphicons-halflings-regular.html");
+  src: url("/animalsinminiature/wp-content/plugins/new-photo-gallery/our-plugins/fonts/bootstrap/glyphicons-halflings-regulard41d.html#iefix") format("embedded-opentype"), url("/animalsinminiature/wp-content/plugins/new-photo-gallery/our-plugins/fonts/bootstrap/glyphicons-halflings-regular-2.html") format("woff"), url("/animalsinminiature/wp-content/plugins/new-photo-gallery/our-plugins/fonts/bootstrap/glyphicons-halflings-regular-3.html") format("truetype"), url("/animalsinminiature/wp-content/plugins/new-photo-gallery/our-plugins/fonts/bootstrap/glyphicons-halflings-regular-4.html#glyphicons_halflingsregular") format("svg"); }
 .glyphicon {
   position: relative;
   top: 1px;
