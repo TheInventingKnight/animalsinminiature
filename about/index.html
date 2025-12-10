@@ -630,7 +630,7 @@ var mwl_data_has_dynamic_cache = true;
 
 
 
-<p>Here is an example of the different stages of progress of one of my sculptures.</p>
+<p> 1Here is an example of the different stages of progress of one of my sculptures.</p>
 
 
 
@@ -786,5 +786,91 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
     }
   });
 </script>
+
+<!-- Ultimate Meow Lightbox Fix for Static Site – Self-Contained -->
+<style>
+  /* Inline the critical CSS to avoid path issues entirely */
+  .pswp { display: none; position: absolute; width: 100%; height: 100%; left: 0; top: 0; overflow: hidden; touch-action: none; z-index: 1500; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: rgba(0,0,0,0); opacity: 1; -webkit-backface-visibility: hidden; outline: none; } /* PhotoSwipe core */
+  .pswp * { box-sizing: border-box; } .pswp--animate_opacity { opacity: .001; transition: opacity 333ms cubic-bezier(.4,0,.22,1); } /* Add more PhotoSwipe CSS if needed, but this minimal set works */
+  .mwl-lightbox { /* Meow Lightbox basics */ } /* Placeholder for Meow styles */
+</style>
+<script>
+/* Inline the minimal JS logic + block all fallbacks */
+(function() {
+  // Block REST API calls before the plugin loads
+  const blockMeowAPI = function() {
+    const originalFetch = window.fetch;
+    window.fetch = function(...args) {
+      if (args[0] && typeof args[0] === 'string' && args[0].includes('meow-lightbox') && args[0].includes('regenerate')) {
+        console.log('Blocked Meow Lightbox 405 for static site – metadata faked');
+        return Promise.resolve({
+          ok: true,
+          status: 200,
+          json: () => Promise.resolve({ success: true, data: { images: [] } }) // Fake empty metadata response
+        });
+      }
+      return originalFetch.apply(this, args);
+    };
+
+    const originalXHR = window.XMLHttpRequest;
+    window.XMLHttpRequest = function() {
+      const xhr = new originalXHR();
+      const originalOpen = xhr.open;
+      xhr.open = function(method, url, ...rest) {
+        if (url && url.includes('meow-lightbox') && url.includes('regenerate')) {
+          console.log('Blocked Meow Lightbox XHR 405 for static site');
+          return; // Don't even open the request
+        }
+        return originalOpen.apply(this, [method, url, ...rest]);
+      };
+      return xhr;
+    };
+  };
+  blockMeowAPI(); // Run immediately
+
+  // Simple lightbox fallback if Meow fails (uses basic PhotoSwipe logic)
+  document.addEventListener('DOMContentLoaded', function() {
+    // Scan for clickable images and attach lightbox
+    const images = document.querySelectorAll('a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"], a[href$=".gif"], a[href$=".webp"] img');
+    images.forEach(img => {
+      const link = img.closest('a');
+      if (link && !link.classList.contains('no-lightbox')) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const imgSrc = this.href;
+          const imgTitle = img.alt || img.title || '';
+          // Create simple modal lightbox
+          const modal = document.createElement('div');
+          modal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:9999;display:flex;align-items:center;justify-content:center;cursor:pointer;';
+          const viewer = document.createElement('img');
+          viewer.src = imgSrc;
+          viewer.style.cssText = 'max-width:90%;max-height:90%;border-radius:8px;box-shadow:0 0 50px rgba(0,0,0,0.5);';
+          const close = document.createElement('span');
+          close.innerHTML = '&times;';
+          close.style.cssText = 'position:absolute;top:20px;right:30px;color:white;font-size:40px;cursor:pointer;';
+          close.onclick = () => modal.remove();
+          modal.appendChild(close);
+          modal.appendChild(viewer);
+          if (imgTitle) {
+            const caption = document.createElement('p');
+            caption.textContent = imgTitle;
+            caption.style.cssText = 'color:white;text-align:center;margin-top:10px;';
+            modal.appendChild(caption);
+          }
+          modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+          document.body.appendChild(modal);
+          viewer.onload = () => viewer.style.opacity = 1;
+        });
+      }
+    });
+
+    // If Meow loads, let it take over
+    if (typeof MeowLightbox !== 'undefined') {
+      MeowLightbox.init();
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
