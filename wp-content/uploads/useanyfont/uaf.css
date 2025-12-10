@@ -1,7 +1,7 @@
 				@font-face {
 					font-family: 'momo-signiture';
-					src: url('/animalsinminiature/wp-content/uploads/useanyfont/1439Momo-Signiture.woff2') format('woff2'),
-						url('/animalsinminiature/wp-content/uploads/useanyfont/1439Momo-Signiture.woff') format('woff');
+					src: url('/wp-content/uploads/useanyfont/1439Momo-Signiture.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/1439Momo-Signiture.woff') format('woff');
 					  font-display: auto;
 				}
 
