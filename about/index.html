@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US">
+<link rel="stylesheet" href="/wp-content/plugins/meow-lightbox/app/lightbox.css">
+<link rel="stylesheet" href="/wp-content/plugins/meow-lightbox/vendor/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/wp-content/plugins/meow-lightbox/vendor/photoswipe/default-skin/default-skin.css">
+<script src="/wp-content/plugins/meow-lightbox/app/lightbox.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof MeowLightbox !== 'undefined') MeowLightbox.init();
+  });
+</script>
 <head><meta charset="UTF-8">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
