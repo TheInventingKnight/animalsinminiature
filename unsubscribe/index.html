@@ -8,7 +8,7 @@
 <link rel="alternate" type="application/rss+xml" title="Animals in Miniature » Feed" href="/feed/">
 <link rel="alternate" type="application/rss+xml" title="Animals in Miniature » Comments Feed" href="/comments/feed/">
 <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Funsubscribe%2F">
-<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Funsubscribe%2F&amp;format=xml">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Funsubscribe%2F&amp;format%3Dxml">
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
@@ -672,17 +672,19 @@ document.getElementById("unsub-form").addEventListener("submit", async function(
 <script type="module" src="/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=b0f909c3ec791c383210" id="@wordpress/block-library/navigation/view-js-module" fetchpriority="low" data-wp-router-options="{&quot;loadOnClientNavigation&quot;:true}"></script>
 <script src="/wp-content/plugins/meow-lightbox/app/lightbox.js" id="meow-lightbox-js"></script>
 <script id="meow-lightbox-js-after">
-jQuery(function($){
-            if (typeof MeowLightbox !== "undefined") MeowLightbox.init();
-        });
-        (function(){
-            var old = window.fetch;
-            window.fetch = function(r){ 
-                if(r && r.toString().includes("regenerate_mwl_data")) 
-                    return Promise.resolve({ok:true, json:()=>Promise.resolve({})}); 
-                return old.apply(this,arguments);
-            };
-        })();
+// Block 405 forever
+        (function(){var old=window.fetch;window.fetch=function(r){if(r&&r.toString().includes("regenerate_mwl_data"))return Promise.resolve({ok:true,json:()=>Promise.resolve({})});return old.apply(this,arguments);};})();
+        
+        // Force init with bulletproof timing
+        function initMeow() {
+            if (typeof MeowLightbox !== "undefined" && MeowLightbox.init) {
+                MeowLightbox.init();
+            }
+        }
+        jQuery(document).ready(initMeow);
+        jQuery(window).on("load", initMeow);
+        // Final fallback: run again after everything
+        setTimeout(initMeow, 800);
     
 //# sourceURL=meow-lightbox-js-after
 </script>
