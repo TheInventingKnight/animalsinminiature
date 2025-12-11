@@ -106,6 +106,9 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 }
 /*# sourceURL=cf-frontend-style-inline-css */
 </style>
+<link rel="stylesheet" id="meow-lightbox-css-css" href="/wp-content/plugins/meow-lightbox/app/lightbox.css?ver=6.9" media="all">
+<link rel="stylesheet" id="photoswipe-css-css" href="/wp-content/plugins/meow-lightbox/vendor/photoswipe/photoswipe.css?ver=6.9" media="all">
+<link rel="stylesheet" id="photoswipe-skin-css" href="/wp-content/plugins/meow-lightbox/vendor/photoswipe/default-skin/default-skin.css?ver=6.9" media="all">
 <style id="wp-emoji-styles-inline-css">
 
 	img.wp-smiley, img.emoji {
@@ -822,6 +825,26 @@ is made to 1:12 dollhouse scale, and comes with a certificate of authenticity.
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/frost/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
 <script type="module" src="/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=b0f909c3ec791c383210" id="@wordpress/block-library/navigation/view-js-module" fetchpriority="low" data-wp-router-options="{&quot;loadOnClientNavigation&quot;:true}"></script>
+<script src="/wp-content/plugins/meow-lightbox/app/lightbox.js" id="meow-lightbox-js-js"></script>
+<script id="meow-lightbox-js-js-after">
+// Block the 405 forever on static sites
+        (function(){
+            var old = window.fetch;
+            window.fetch = function(r){ 
+                if(r && r.toString().includes("regenerate_mwl_data")) return Promise.resolve({ok:true,json:()=>Promise.resolve({})}); 
+                return old.apply(this,arguments);
+            };
+        })();
+
+        // Force Meow Lightbox to initialise on every page
+        jQuery(document).ready(function($){
+            if(typeof MeowLightbox !== "undefined"){
+                MeowLightbox.init();
+            }
+        });
+    
+//# sourceURL=meow-lightbox-js-js-after
+</script>
 <script id="wp-block-template-skip-link-js-after">
 	( function() {
 		var skipLinkTarget = document.querySelector( 'main' ),
