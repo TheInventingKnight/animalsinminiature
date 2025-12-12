@@ -8,7 +8,7 @@
 <link rel="alternate" type="application/rss+xml" title="Animals in Miniature » Feed" href="/feed/">
 <link rel="alternate" type="application/rss+xml" title="Animals in Miniature » Comments Feed" href="/comments/feed/">
 <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fcontact%2F">
-<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fcontact%2F&amp;format%3Dxml">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fcontact%2F&amp;format=xml">
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
@@ -529,7 +529,7 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 //# sourceURL=wp-i18n-js-after
 </script>
 <script id="mwl-build-js-js-extra">
-var mwl_settings = {"api_url":"/wp-json/meow-lightbox/v1/","rest_nonce":"134393a66f","plugin_url":"/wp-content/plugins/meow-lightbox/app/","version":"1765219991","settings":{"rtf_slider_fix":false,"engine":"photoswipe","backdrop_opacity":85,"theme":"light-glass","flat_orientation":"below","orientation":"auto","selector":".entry-content, .gallery, .mgl-gallery, .wp-block-gallery,  .wp-block-image","selector_ahead":false,"deep_linking":false,"deep_linking_slug":"mwl","rendering_delay":300,"include_orphans":false,"js_logs":false,"social_sharing":false,"social_sharing_facebook":true,"social_sharing_twitter":true,"social_sharing_pinterest":true,"separate_galleries":true,"disable_arrows_on_mobile":false,"animation_toggle":"none","animation_speed":"normal","low_res_placeholder":false,"wordpress_big_image":false,"right_click_protection":true,"magnification":true,"full_screen":true,"anti_selector":".blog, .archive, .emoji, .attachment-post-image, .no-lightbox","preloading":false,"download_link":false,"caption_source":"caption","caption_ellipsis":true,"exif":{"title":true,"caption":true,"camera":false,"lens":false,"date":false,"date_timezone":false,"shutter_speed":false,"aperture":false,"focal_length":false,"iso":false,"keywords":false,"metadata_toggle":false},"slideshow":{"enabled":false,"timer":3000},"map":{"enabled":false}}};
+var mwl_settings = {"api_url":"/wp-json/meow-lightbox/v1/","rest_nonce":"0a66c821d0","plugin_url":"/wp-content/plugins/meow-lightbox/app/","version":"1765219991","settings":{"rtf_slider_fix":false,"engine":"photoswipe","backdrop_opacity":85,"theme":"light-glass","flat_orientation":"below","orientation":"auto","selector":".entry-content, .gallery, .mgl-gallery, .wp-block-gallery,  .wp-block-image","selector_ahead":false,"deep_linking":false,"deep_linking_slug":"mwl","rendering_delay":300,"include_orphans":false,"js_logs":false,"social_sharing":false,"social_sharing_facebook":true,"social_sharing_twitter":true,"social_sharing_pinterest":true,"separate_galleries":true,"disable_arrows_on_mobile":false,"animation_toggle":"none","animation_speed":"normal","low_res_placeholder":false,"wordpress_big_image":false,"right_click_protection":true,"magnification":true,"full_screen":true,"anti_selector":".blog, .archive, .emoji, .attachment-post-image, .no-lightbox","preloading":false,"download_link":false,"caption_source":"caption","caption_ellipsis":true,"exif":{"title":true,"caption":true,"camera":false,"lens":false,"date":false,"date_timezone":false,"shutter_speed":false,"aperture":false,"focal_length":false,"iso":false,"keywords":false,"metadata_toggle":false},"slideshow":{"enabled":false,"timer":3000},"map":{"enabled":false}}};
 //# sourceURL=mwl-build-js-js-extra
 </script>
 <script src="/wp-content/plugins/meow-lightbox/app/lightbox.js?ver=1765219991" id="mwl-build-js-js"></script>
@@ -731,23 +731,7 @@ document.getElementById('formeasy-form').addEventListener('submit', async functi
 <script type="module" src="/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=b0f909c3ec791c383210" id="@wordpress/block-library/navigation/view-js-module" fetchpriority="low" data-wp-router-options="{&quot;loadOnClientNavigation&quot;:true}"></script>
 <script src="/wp-content/plugins/meow-lightbox/app/lightbox.js" id="meow-lightbox-js"></script>
 <script id="meow-lightbox-js-after">
-jQuery(function($){
-            if (typeof MeowLightbox !== "undefined") {
-                MeowLightbox.init();
-            }
-        });
-        (function(){
-            var old = window.fetch;
-            window.fetch = function(r){
-                if(r && r.toString().includes("regenerate_mwl_data")) {
-                    return Promise.resolve({ok:true, json:()=>Promise.resolve({})});
-                }
-                return old.apply(this,arguments);
-            };
-        })();
-    
-
-        // Block 405 forever
+// Block 405 forever
         (function(){var old=window.fetch;window.fetch=function(r){if(r&&r.toString().includes("regenerate_mwl_data"))return Promise.resolve({ok:true,json:()=>Promise.resolve({})});return old.apply(this,arguments);};})();
         
         // Force init with bulletproof timing
