@@ -4,7 +4,7 @@ Tags: lightbox, responsive, exif, photoswipe, photography
 Donate link: https://www.patreon.com/meowapps
 Requires at least: 6.0
 Tested up to: 6.9
-Stable tag: 5.4.8
+Stable tag: 5.5.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -152,6 +152,23 @@ Yes! Use arrow keys to navigate, ESC to close, and keyboard shortcuts for all co
 Meow Lightbox works great with translation plugins and multilingual setups.
 
 == Changelog ==
+
+= 5.5.0 (2026/02/25) =
+* Add: New autoplay option for slideshows so galleries can play automatically.
+* Add: Support for rendering the lightbox inside a parent element.
+* Update: Orphaned media now reuses existing IDs for the same URL to avoid duplicate entries.
+* Fix: Hotfix to prevent server errors (500) when EXIF GPS data is not formatted as an array.
+* Update: Upgraded the DiDom library to v2 to resolve double-encoding issues.
+
+= 5.4.9 (2026/01/27) =
+* Fix: Improve shutter speed handling by converting string values to floats.
+* Fix: Speed up thumbnail loading by cleaning URLs before checking for related media attachments.
+* Fix: Ensure deep linking only opens after the page has fully rendered to prevent broken or partial views.
+* Update: Improve mobile and tablet detection by using the browser’s user agent.
+* Update: Allow Orphans to support custom width and height attributes.
+* 🎵 Discuss with others about Meow Lightbox on [the Discord](https://discord.gg/bHDGh38).
+* 🌴 Keep us motivated with [a little review here](https://wordpress.org/support/plugin/meow-lightbox/reviews/). Thank you!
+* 🥰 If you want to help us, check our [Patreon](https://www.patreon.com/meowapps). Thank you!
 
 = 5.4.8 (2026/01/05) =
 * Update: Improve image matching and lazy loading by using data-src instead of src when available.  

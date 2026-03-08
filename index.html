@@ -59,6 +59,10 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 .wp-block-columns{box-sizing:border-box;display:flex;flex-wrap:wrap!important}@media (min-width:782px){.wp-block-columns{flex-wrap:nowrap!important}}.wp-block-columns{align-items:normal!important}.wp-block-columns.are-vertically-aligned-top{align-items:flex-start}.wp-block-columns.are-vertically-aligned-center{align-items:center}.wp-block-columns.are-vertically-aligned-bottom{align-items:flex-end}@media (max-width:781px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:100%!important}}@media (min-width:782px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column[style*=flex-basis]{flex-grow:0}}.wp-block-columns.is-not-stacked-on-mobile{flex-wrap:nowrap!important}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column[style*=flex-basis]{flex-grow:0}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}.wp-block-column{flex-grow:1;min-width:0;overflow-wrap:break-word;word-break:break-word}.wp-block-column.is-vertically-aligned-top{align-self:flex-start}.wp-block-column.is-vertically-aligned-center{align-self:center}.wp-block-column.is-vertically-aligned-bottom{align-self:flex-end}.wp-block-column.is-vertically-aligned-stretch{align-self:stretch}.wp-block-column.is-vertically-aligned-bottom,.wp-block-column.is-vertically-aligned-center,.wp-block-column.is-vertically-aligned-top{width:100%}
 /*# sourceURL=/wp-includes/blocks/columns/style.min.css */
 </style>
+<style id="wp-block-separator-inline-css">
+@charset "UTF-8";.wp-block-separator{border:none;border-top:2px solid}:root :where(.wp-block-separator.is-style-dots){height:auto;line-height:1;text-align:center}:root :where(.wp-block-separator.is-style-dots):before{color:currentColor;content:"···";font-family:serif;font-size:1.5em;letter-spacing:2em;padding-left:2em}.wp-block-separator.is-style-dots{background:none!important;border:none!important}
+/*# sourceURL=/wp-includes/blocks/separator/style.min.css */
+</style>
 <style id="cf-frontend-style-inline-css">
 @font-face {
 	font-family: 'Kalam';
@@ -510,6 +514,7 @@ figure.effect-zoe figcaption {
 :root :where(.wp-block-navigation){font-size: var(--wp--preset--font-size--small);}
 :root :where(.wp-block-navigation a:where(:not(.wp-element-button))){text-decoration: none;}
 :root :where(p.has-background ){padding: 20px 30px;}
+:root :where(.wp-block-separator){border-radius: 0;border-color: currentColor;border-width: 1px 0 0;border-style: solid;}:root :where(.wp-block-separator:not(.is-style-wide):not(.is-style-dots) ){width: 100px;}
 :root :where(.wp-block-site-title){font-size: var(--wp--preset--font-size--large);}
 :root :where(.wp-block-site-title a:where(:not(.wp-element-button))){text-decoration: none;}
 :root :where(.wp-block-template-part){margin-top: 0;}
@@ -550,9 +555,9 @@ figure.effect-zoe figcaption {
 		}
 /*# sourceURL=wp-block-template-skip-link-inline-css */
 </style>
-<link rel="stylesheet" id="edsanimate-animo-css-css" href="/wp-content/plugins/animate-it/assets/css/animate-animo.css?ver=6.9" media="all">
-<link rel="stylesheet" id="mgl-css-css" href="/wp-content/plugins/meow-gallery/app/style.min.css?ver=1768422279" media="all">
-<link rel="stylesheet" id="leaflet-css-css" href="/wp-content/plugins/meow-lightbox/app/style.min.css?ver=1768422273" media="all">
+<link rel="stylesheet" id="edsanimate-animo-css-css" href="/wp-content/plugins/animate-it/assets/css/animate-animo.css?ver=6.9.1" media="all">
+<link rel="stylesheet" id="mgl-css-css" href="/wp-content/plugins/meow-gallery/app/style.min.css?ver=1772925062" media="all">
+<link rel="stylesheet" id="leaflet-css-css" href="/wp-content/plugins/meow-lightbox/app/style.min.css?ver=1772925057" media="all">
 <link rel="stylesheet" id="uaf_client_css-css" href="/wp-content/uploads/useanyfont/uaf.css?ver=1764618611" media="all">
 <link rel="stylesheet" id="frost-css" href="/wp-content/themes/frost/style.css?ver=1.0.10" media="all">
 <script src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
@@ -564,16 +569,16 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 //# sourceURL=wp-i18n-js-after
 </script>
 <script id="mwl-build-js-js-extra">
-var mwl_settings = {"api_url":"/wp-json/meow-lightbox/v1/","rest_nonce":"1ae4cd2dd8","plugin_url":"/wp-content/plugins/meow-lightbox/app/","version":"1768422273","settings":{"rtf_slider_fix":false,"engine":"photoswipe","backdrop_opacity":85,"theme":"light-glass","flat_orientation":"below","orientation":"auto","selector":".entry-content, .gallery, .mgl-gallery, .wp-block-gallery,  .wp-block-image","selector_ahead":false,"deep_linking":false,"deep_linking_slug":"mwl","rendering_delay":300,"skip_dynamic_fetch":false,"include_orphans":false,"js_logs":false,"social_sharing":false,"social_sharing_facebook":true,"social_sharing_twitter":true,"social_sharing_pinterest":true,"separate_galleries":true,"disable_arrows_on_mobile":false,"animation_toggle":"none","animation_speed":"normal","low_res_placeholder":false,"wordpress_big_image":false,"right_click_protection":true,"magnification":true,"full_screen":true,"anti_selector":".blog, .archive, .emoji, .attachment-post-image, .no-lightbox, .frogger-rocket, .no-meow","preloading":false,"download_link":false,"caption_source":"caption","caption_ellipsis":true,"exif":{"title":true,"caption":false,"camera":false,"lens":false,"date":false,"date_timezone":false,"shutter_speed":false,"aperture":false,"focal_length":false,"copyright":false,"author":false,"iso":false,"keywords":false,"metadata_toggle":false,"metadata_toggle_start_hidden":false},"slideshow":{"enabled":false,"timer":3000},"map":{"enabled":false}}};
+var mwl_settings = {"api_url":"/wp-json/meow-lightbox/v1/","rest_nonce":"128b75f353","plugin_url":"/wp-content/plugins/meow-lightbox/app/","version":"1772925057","settings":{"rtf_slider_fix":false,"engine":"photoswipe","backdrop_opacity":85,"theme":"light-glass","flat_orientation":"below","orientation":"auto","selector":".entry-content, .gallery, .mgl-gallery, .wp-block-gallery,  .wp-block-image","selector_ahead":false,"deep_linking":false,"deep_linking_slug":"mwl","rendering_delay":300,"skip_dynamic_fetch":false,"include_orphans":false,"js_logs":false,"social_sharing":false,"social_sharing_facebook":true,"social_sharing_twitter":true,"social_sharing_pinterest":true,"separate_galleries":true,"disable_arrows_on_mobile":false,"animation_toggle":"none","animation_speed":"normal","low_res_placeholder":false,"wordpress_big_image":false,"right_click_protection":true,"magnification":true,"full_screen":true,"anti_selector":".blog, .archive, .emoji, .attachment-post-image, .no-lightbox, .frogger-rocket, .no-meow","preloading":false,"download_link":false,"caption_source":"caption","caption_ellipsis":true,"exif":{"title":true,"caption":false,"camera":false,"lens":false,"date":false,"date_timezone":false,"shutter_speed":false,"aperture":false,"focal_length":false,"copyright":false,"author":false,"iso":false,"keywords":false,"metadata_toggle":false,"metadata_toggle_start_hidden":false},"slideshow":{"enabled":false,"timer":3000,"autoplay":false},"map":{"enabled":false}}};
 //# sourceURL=mwl-build-js-js-extra
 </script>
-<script src="/wp-content/plugins/meow-lightbox/app/lightbox.js?ver=1768422273" id="mwl-build-js-js"></script>
+<script src="/wp-content/plugins/meow-lightbox/app/lightbox.js?ver=1772925057" id="mwl-build-js-js"></script>
 <link rel="https://api.w.org/" href="/wp-json/"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
-<meta name="generator" content="WordPress 6.9">
+<meta name="generator" content="WordPress 6.9.1">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="6edf3dce-aa3e-4a32-892f-0b44d1264e10"></script><script type="importmap" id="wp-importmap">
-{"imports":{"@wordpress/interactivity":"/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=8964710565a1d258501f"}}
+{"imports":{"@wordpress/interactivity":"/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=66c613f68580994bb00a"}}
 </script>
-<link rel="modulepreload" href="/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=8964710565a1d258501f" id="@wordpress/interactivity-js-modulepreload" fetchpriority="low">
+<link rel="modulepreload" href="/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=66c613f68580994bb00a" id="@wordpress/interactivity-js-modulepreload" fetchpriority="low">
 <style class="wp-fonts-local">
 @font-face{font-family:Outfit;font-style:normal;font-weight:100 900;font-display:block;src:url('/wp-content/themes/frost/assets/fonts/Outfit-Variable.woff2') format('woff2');font-stretch:normal;}
 @font-face{font-family:momo-signiture;font-style:normal;font-weight:400;font-display:fallback;src:url('/wp-content/uploads/useanyfont/1439Momo-Signiture.woff2') format('woff2');}
@@ -649,6 +654,188 @@ var mwl_settings = {"api_url":"/wp-json/meow-lightbox/v1/","rest_nonce":"1ae4cd2
 </div>
 </div>
 </div>
+
+
+<!-- Load a legal, free elegant font with good numerals -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&amp;display=swap" rel="stylesheet">
+
+<style>
+/* ====== WRAPPER ====== */
+.miniature-showcase-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 70px 0;
+  padding: 0 20px;
+}
+
+/* ====== CARD ====== */
+.miniature-showcase {
+  width: 100%;
+  max-width: 900px;
+  background: linear-gradient(150deg, #fafdff 0%, #f4f4ff 45%, #ffffff 100%);
+  border-radius: 32px;
+  padding: 0;
+  box-shadow: 0 16px 42px rgba(0,0,0,0.10);
+  border: 1px solid rgba(255,255,255,0.85);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease forwards;
+  transform: translateY(20px);
+}
+
+/* ====== TOP TITLE BAR (solid #2DB2FF) ====== */
+.miniature-top-bar {
+  width: 100%;
+  background: #2DB2FF; /* solid blue */
+  padding: 6px 0;
+  text-align: center;
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  z-index: 3;
+  position: relative;
+}
+
+/* ====== BACKGROUND ORNAMENTS ====== */
+.miniature-showcase::before,
+.miniature-showcase::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.38;
+  z-index: 0;
+}
+
+.miniature-showcase::before {
+  width: 240px;
+  height: 240px;
+  background: #2DB2FF;
+  top: 40px;
+  left: -40px;
+}
+
+.miniature-showcase::after {
+  width: 280px;
+  height: 280px;
+  background: #C58BFF;
+  bottom: -80px;
+  right: -60px;
+}
+
+/* ====== CONTENT LAYOUT ====== */
+.miniature-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  padding: 40px;
+}
+
+@media (max-width: 780px) {
+  .miniature-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+}
+
+/* ====== IMAGE (NO ANIMATION) ====== */
+.miniature-image {
+  flex: 1;
+  max-width: 380px;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+.miniature-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ====== TEXT CONTENT ====== */
+.miniature-text {
+  flex: 1.2;
+}
+
+/* Elegant, readable font with good numerals */
+.miniature-text h2 {
+  font-family: 'Lora', serif;
+  font-size: 2.35rem;
+  margin: 0 0 16px;
+  color: #2f2a45;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.miniature-text p {
+  font-size: 1.12rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin-bottom: 28px;
+}
+
+/* ====== BUTTON (your colors) ====== */
+.miniature-button {
+  display: inline-block;
+  padding: 13px 24px;
+  background: linear-gradient(135deg, #2DB2FF, #C58BFF);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 1.03rem;
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(120,130,255,0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.miniature-button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #28a5ee, #b67df5);
+  box-shadow: 0 10px 24px rgba(120,130,255,0.45);
+}
+
+/* ====== ANIMATION ====== */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<div class="miniature-showcase-wrapper">
+  <div class="miniature-showcase">
+
+    <div class="miniature-top-bar">Available Now</div>
+
+    <div class="miniature-content">
+
+      <div class="miniature-image">
+        <img src="/wp-content/uploads/2026/03/baby-chicks.webp" alt="Miniature Sculpture" data-mwl-ignored="true">
+      </div>
+
+      <div class="miniature-text">
+        <h2>1:12 Scale Easter Chicks</h2>
+        <p>
+These three tiny chicks are one of a kind original pieces by IGMA Artisan Sarah Grace.
+They are made to 1:12 dollhouse scale, and come with a certificate of authenticity.
+        </p>
+        <a href="https://www.ebay.ca/itm/257394539571" target="_blank" rel="noopener noreferrer" class="miniature-button">Go to listing →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
 
 
 
@@ -813,7 +1000,7 @@ var edsanimate_options = {"offset":"75","hide_hz_scrollbar":"1","hide_vl_scrollb
 </script>
 <script src="/wp-content/plugins/animate-it/assets/js/edsanimate.site.js?ver=1.4.5" id="edsanimate-site-script-js"></script>
 <script id="wp-emoji-settings" type="application/json">
-{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"/wp-includes/js/wp-emoji-release.min.js?ver=6.9"}}
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"/wp-includes/js/wp-emoji-release.min.js?ver=6.9.1"}}
 </script>
 <script type="module">
 /*! This file is auto-generated */
