@@ -7544,7 +7544,6 @@ __webpack_require__.d(__webpack_exports__, {
   RichTextToolbarButton: () => (/* reexport */ RichTextToolbarButton),
   SETTINGS_DEFAULTS: () => (/* reexport */ SETTINGS_DEFAULTS),
   SkipToSelectedBlock: () => (/* reexport */ SkipToSelectedBlock),
-  ToolSelector: () => (/* reexport */ tool_selector_default),
   Typewriter: () => (/* reexport */ typewriter_default),
   URLInput: () => (/* reexport */ url_input_default),
   URLInputButton: () => (/* reexport */ button_default),
@@ -8267,6 +8266,7 @@ const selectBlockPatternsKey = Symbol("selectBlockPatternsKey");
 const reusableBlocksSelectKey = Symbol("reusableBlocksSelect");
 const sectionRootClientIdKey = Symbol("sectionRootClientIdKey");
 const mediaEditKey = Symbol("mediaEditKey");
+const essentialFormatKey = Symbol("essentialFormat");
 
 
 ;// external ["wp","privateApis"]
@@ -23918,7 +23918,9 @@ const color_panel_DEFAULT_CONTROLS = {
 const popoverProps = {
   placement: "left-start",
   offset: 36,
-  shift: true
+  shift: true,
+  flip: true,
+  resize: false
 };
 const { Tabs: color_panel_Tabs } = unlock(external_wp_components_namespaceObject.privateApis);
 const LabeledColorIndicators = ({ indicators, label }) => /* @__PURE__ */ (0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_wp_components_namespaceObject.__experimentalHStack, { justify: "flex-start", children: [
@@ -25644,7 +25646,6 @@ function WritingModeControl({ className, value, onChange }) {
 
 
 
-
 const MIN_TEXT_COLUMNS = 1;
 const MAX_TEXT_COLUMNS = 6;
 function useHasTypographyPanel(settings) {
@@ -25765,46 +25766,13 @@ function TypographyPanel({
     const slug = fontFamilies?.find(
       ({ fontFamily: f }) => f === newValue
     )?.slug;
-    let updatedValue = setImmutably(
-      value,
-      ["typography", "fontFamily"],
-      slug ? `var:preset|font-family|${slug}` : newValue || void 0
+    onChange(
+      setImmutably(
+        value,
+        ["typography", "fontFamily"],
+        slug ? `var:preset|font-family|${slug}` : newValue || void 0
+      )
     );
-    const newFontFamilyFaces = fontFamilies?.find(({ fontFamily: f }) => f === newValue)?.fontFace ?? [];
-    const { fontStyles, fontWeights } = getFontStylesAndWeights(newFontFamilyFaces);
-    const hasFontStyle = fontStyles?.some(
-      ({ value: fs }) => fs === fontStyle
-    );
-    const hasFontWeight = fontWeights?.some(
-      ({ value: fw }) => fw?.toString() === fontWeight?.toString()
-    );
-    if (!hasFontStyle || !hasFontWeight) {
-      const { nearestFontStyle, nearestFontWeight } = findNearestStyleAndWeight(
-        newFontFamilyFaces,
-        fontStyle,
-        fontWeight
-      );
-      if (nearestFontStyle || nearestFontWeight) {
-        updatedValue = {
-          ...updatedValue,
-          typography: {
-            ...updatedValue?.typography,
-            fontStyle: nearestFontStyle || void 0,
-            fontWeight: nearestFontWeight || void 0
-          }
-        };
-      } else if (fontStyle || fontWeight) {
-        updatedValue = {
-          ...updatedValue,
-          typography: {
-            ...updatedValue?.typography,
-            fontStyle: void 0,
-            fontWeight: void 0
-          }
-        };
-      }
-    }
-    onChange(updatedValue);
   };
   const hasFontFamily = () => !!value?.typography?.fontFamily;
   const resetFontFamily = () => setFontFamily(void 0);
@@ -25846,6 +25814,11 @@ function TypographyPanel({
   const hasFontWeights = settings?.typography?.fontWeight;
   const fontStyle = decodeValue(inheritedValue?.typography?.fontStyle);
   const fontWeight = decodeValue(inheritedValue?.typography?.fontWeight);
+  const { nearestFontStyle, nearestFontWeight } = findNearestStyleAndWeight(
+    fontFamilyFaces,
+    fontStyle,
+    fontWeight
+  );
   const setFontAppearance = (0,external_wp_element_namespaceObject.useCallback)(
     ({ fontStyle: newFontStyle, fontWeight: newFontWeight }) => {
       if (newFontStyle !== fontStyle || newFontWeight !== fontWeight) {
@@ -25865,6 +25838,21 @@ function TypographyPanel({
   const resetFontAppearance = (0,external_wp_element_namespaceObject.useCallback)(() => {
     setFontAppearance({});
   }, [setFontAppearance]);
+  (0,external_wp_element_namespaceObject.useEffect)(() => {
+    if (nearestFontStyle && nearestFontWeight) {
+      setFontAppearance({
+        fontStyle: nearestFontStyle,
+        fontWeight: nearestFontWeight
+      });
+    } else {
+      resetFontAppearance();
+    }
+  }, [
+    nearestFontStyle,
+    nearestFontWeight,
+    resetFontAppearance,
+    setFontAppearance
+  ]);
   const hasLineHeightEnabled = useHasLineHeightControl(settings);
   const lineHeight = decodeValue(inheritedValue?.typography?.lineHeight);
   const setLineHeight = (newValue) => {
@@ -26719,31 +26707,17 @@ function findOptimalFontSize(textElement, applyFontSize) {
   let maxSize = 2400;
   let bestSize = minSize;
   const computedStyle = window.getComputedStyle(textElement);
-  let paddingLeft = parseFloat(computedStyle.paddingLeft) || 0;
-  let paddingRight = parseFloat(computedStyle.paddingRight) || 0;
+  const paddingLeft = parseFloat(computedStyle.paddingLeft) || 0;
+  const paddingRight = parseFloat(computedStyle.paddingRight) || 0;
   const range = document.createRange();
   range.selectNodeContents(textElement);
-  let referenceElement = textElement;
-  const parentElement = textElement.parentElement;
-  if (parentElement) {
-    const parentElementComputedStyle = window.getComputedStyle(parentElement);
-    if (parentElementComputedStyle?.display === "flex") {
-      referenceElement = parentElement;
-      paddingLeft += parseFloat(parentElementComputedStyle.paddingLeft) || 0;
-      paddingRight += parseFloat(parentElementComputedStyle.paddingRight) || 0;
-    }
-  }
-  let maxclientHeight = referenceElement.clientHeight;
   while (minSize <= maxSize) {
     const midSize = Math.floor((minSize + maxSize) / 2);
     applyFontSize(midSize);
     const rect = range.getBoundingClientRect();
     const textWidth = rect.width;
-    const fitsWidth = textElement.scrollWidth <= referenceElement.clientWidth && textWidth <= referenceElement.clientWidth - paddingLeft - paddingRight;
-    const fitsHeight = alreadyHasScrollableHeight || textElement.scrollHeight <= referenceElement.clientHeight || textElement.scrollHeight <= maxclientHeight;
-    if (referenceElement.clientHeight > maxclientHeight) {
-      maxclientHeight = referenceElement.clientHeight;
-    }
+    const fitsWidth = textElement.scrollWidth <= textElement.clientWidth && textWidth <= textElement.clientWidth - paddingLeft - paddingRight;
+    const fitsHeight = alreadyHasScrollableHeight || textElement.scrollHeight <= textElement.clientHeight;
     if (fitsWidth && fitsHeight) {
       bestSize = midSize;
       minSize = midSize + 1;
@@ -26795,19 +26769,14 @@ function fit_text_addAttributes(settings) {
 function useFitText({ fitText, name, clientId }) {
   const hasFitTextSupport2 = (0,external_wp_blocks_namespaceObject.hasBlockSupport)(name, FIT_TEXT_SUPPORT_KEY);
   const blockElement = useBlockElement(clientId);
-  const { blockAttributes, parentId, blockMode } = (0,external_wp_data_namespaceObject.useSelect)(
+  const { blockAttributes, parentId } = (0,external_wp_data_namespaceObject.useSelect)(
     (select) => {
       if (!clientId || !hasFitTextSupport2 || !fitText) {
         return EMPTY_OBJECT;
       }
-      const _blockMode = select(store).getBlockMode(clientId);
-      if (_blockMode === "html") {
-        return { blockMode: _blockMode };
-      }
       return {
         blockAttributes: select(store).getBlockAttributes(clientId),
-        parentId: select(store).getBlockRootClientId(clientId),
-        blockMode: _blockMode
+        parentId: select(store).getBlockRootClientId(clientId)
       };
     },
     [clientId, hasFitTextSupport2, fitText]
@@ -26834,7 +26803,7 @@ function useFitText({ fitText, name, clientId }) {
     optimizeFitText(blockElement, applyFontSize);
   }, [blockElement, clientId, hasFitTextSupport2, fitText]);
   (0,external_wp_element_namespaceObject.useEffect)(() => {
-    if (!fitText || !blockElement || !clientId || !hasFitTextSupport2 || blockMode === "html") {
+    if (!fitText || !blockElement || !clientId || !hasFitTextSupport2) {
       return;
     }
     const currentElement = blockElement;
@@ -26882,11 +26851,10 @@ function useFitText({ fitText, name, clientId }) {
     parentId,
     applyFitText,
     blockElement,
-    hasFitTextSupport2,
-    blockMode
+    hasFitTextSupport2
   ]);
   (0,external_wp_element_namespaceObject.useEffect)(() => {
-    if (fitText && blockElement && hasFitTextSupport2 && blockMode !== "html") {
+    if (fitText && blockElement && hasFitTextSupport2) {
       const frameId = window.requestAnimationFrame(() => {
         if (blockElement) {
           applyFitText();
@@ -26899,8 +26867,7 @@ function useFitText({ fitText, name, clientId }) {
     fitText,
     applyFitText,
     blockElement,
-    hasFitTextSupport2,
-    blockMode
+    hasFitTextSupport2
   ]);
 }
 function fit_text_addSaveProps(props, blockType, attributes) {
@@ -60400,6 +60367,7 @@ function useMarkPersistent({ html, value }) {
 
 
 
+
 function formatTypesSelector(select) {
   return select(external_wp_richText_namespaceObject.store).getFormatTypes();
 }
@@ -60439,21 +60407,37 @@ function getPrefixedSelectKeys(selected, prefix) {
 function useFormatTypes({
   clientId,
   identifier,
+  allowedFormats,
   withoutInteractiveFormatting,
-  allowedFormats
+  disableNoneEssentialFormatting = false
 }) {
   const allFormatTypes = (0,external_wp_data_namespaceObject.useSelect)(formatTypesSelector, []);
   const formatTypes = (0,external_wp_element_namespaceObject.useMemo)(() => {
-    return allFormatTypes.filter(({ name, interactive, tagName }) => {
-      if (allowedFormats && !allowedFormats.includes(name)) {
-        return false;
+    return allFormatTypes.filter(
+      ({
+        name,
+        interactive,
+        tagName,
+        [essentialFormatKey]: isEssential
+      }) => {
+        if (allowedFormats && !allowedFormats.includes(name)) {
+          return false;
+        }
+        if (disableNoneEssentialFormatting && !isEssential) {
+          return false;
+        }
+        if (withoutInteractiveFormatting && (interactive || interactiveContentTags.has(tagName))) {
+          return false;
+        }
+        return true;
       }
-      if (withoutInteractiveFormatting && (interactive || interactiveContentTags.has(tagName))) {
-        return false;
-      }
-      return true;
-    });
-  }, [allFormatTypes, allowedFormats, withoutInteractiveFormatting]);
+    );
+  }, [
+    allFormatTypes,
+    allowedFormats,
+    disableNoneEssentialFormatting,
+    withoutInteractiveFormatting
+  ]);
   const keyedSelected = (0,external_wp_data_namespaceObject.useSelect)(
     (select) => formatTypes.reduce((accumulator, type) => {
       if (!type.__experimentalGetPropsForEditableTreePreparation) {
@@ -61453,7 +61437,7 @@ function RichTextWrapper({
     if (!isBlockSelected) {
       return { isSelected: false };
     }
-    const { getSelectionStart: getSelectionStart2, getSelectionEnd: getSelectionEnd2 } = select(store);
+    const { getSelectionStart: getSelectionStart2, getSelectionEnd: getSelectionEnd2, getBlockEditingMode } = select(store);
     const selectionStart2 = getSelectionStart2();
     const selectionEnd2 = getSelectionEnd2();
     let isSelected2;
@@ -61465,10 +61449,11 @@ function RichTextWrapper({
     return {
       selectionStart: isSelected2 ? selectionStart2.offset : void 0,
       selectionEnd: isSelected2 ? selectionEnd2.offset : void 0,
-      isSelected: isSelected2
+      isSelected: isSelected2,
+      isContentOnly: getBlockEditingMode(clientId) === "contentOnly"
     };
   };
-  const { selectionStart, selectionEnd, isSelected } = (0,external_wp_data_namespaceObject.useSelect)(selector, [
+  const { selectionStart, selectionEnd, isSelected, isContentOnly } = (0,external_wp_data_namespaceObject.useSelect)(selector, [
     clientId,
     identifier,
     instanceId,
@@ -61599,8 +61584,9 @@ function RichTextWrapper({
   } = useFormatTypes({
     clientId,
     identifier,
+    allowedFormats: adjustedAllowedFormats,
     withoutInteractiveFormatting,
-    allowedFormats: adjustedAllowedFormats
+    disableNoneEssentialFormatting: isContentOnly
   });
   function addEditorOnlyFormats(value2) {
     return valueHandlers.reduce(
@@ -63837,21 +63823,7 @@ function PublicPublishDateTimePicker(props, ref) {
 var publish_date_time_picker_default = (0,external_wp_element_namespaceObject.forwardRef)(PublicPublishDateTimePicker);
 
 
-;// ./node_modules/@wordpress/block-editor/build-module/components/tool-selector/index.js
-
-
-function ToolSelector() {
-  external_wp_deprecated_default()("wp.blockEditor.ToolSelector", {
-    since: "6.9",
-    hint: "The ToolSelector component no longer renders anything."
-  });
-  return null;
-}
-var tool_selector_default = (0,external_wp_element_namespaceObject.forwardRef)(ToolSelector);
-
-
 ;// ./node_modules/@wordpress/block-editor/build-module/components/index.js
-
 
 
 
@@ -67446,6 +67418,7 @@ lock(privateApis, {
   CommentIconSlotFill: block_comment_icon_slot_default,
   CommentIconToolbarSlotFill: block_comment_icon_toolbar_slot_default,
   mediaEditKey: mediaEditKey,
+  essentialFormatKey: essentialFormatKey,
   useBlockElement: useBlockElement,
   useBlockElementRef: useBlockElementRef
 });

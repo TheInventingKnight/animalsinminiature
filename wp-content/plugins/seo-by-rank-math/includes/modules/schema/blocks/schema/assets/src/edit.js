@@ -37,8 +37,6 @@ export default ( {
 						attrs[ slug ] = newID ? newID : rankMath.objectID
 						setAttributes( attrs )
 					} }
-					__next40pxDefaultSize={ true }
-					__nextHasNoMarginBottom={ true }
 				/>
 			)
 			return
@@ -56,8 +54,6 @@ export default ( {
 						attrs[ slug ] = nextID
 						setAttributes( attrs )
 					} }
-					__next40pxDefaultSize={ true }
-					__nextHasNoMarginBottom={ true }
 				/>
 			)
 		}

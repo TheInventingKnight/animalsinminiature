@@ -62,8 +62,6 @@ export default function List( { headings = {}, onHeadingUpdate = {}, edit = {}, 
 								placeholder={ __( 'Heading Link', 'rank-math' ) }
 								value={ link }
 								onChange={ ( newLink ) => onHeadingUpdate( newLink, key ) }
-								__next40pxDefaultSize={ true }
-								__nextHasNoMarginBottom={ true }
 							/>
 						}
 						{

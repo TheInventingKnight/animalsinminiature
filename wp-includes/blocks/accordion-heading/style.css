@@ -1,8 +1,12 @@
+.wp-block-accordion-heading{
+  margin:0;
+}
+
 .wp-block-accordion-heading__toggle{
   align-items:center;
-  background:none;
+  background-color:inherit !important;
   border:none;
-  color:inherit;
+  color:inherit !important;
   cursor:pointer;
   display:flex;
   font-family:inherit;
@@ -21,6 +25,18 @@
 }
 .wp-block-accordion-heading__toggle:not(:focus-visible){
   outline:none;
+}
+.wp-block-accordion-heading__toggle:focus,.wp-block-accordion-heading__toggle:hover{
+  background-color:inherit !important;
+  border:none;
+  box-shadow:none;
+  color:inherit;
+  padding:var(--wp--preset--spacing--20, 1em) 0;
+  text-decoration:none;
+}
+.wp-block-accordion-heading__toggle:focus-visible{
+  outline:auto;
+  outline-offset:0;
 }
 .wp-block-accordion-heading__toggle:hover .wp-block-accordion-heading__toggle-title{
   text-decoration:underline;
