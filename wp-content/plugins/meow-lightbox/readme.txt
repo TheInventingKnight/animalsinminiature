@@ -3,9 +3,9 @@ Contributors: TigrouMeow
 Tags: lightbox, responsive, exif, photoswipe, photography
 Donate link: https://www.patreon.com/meowapps
 Requires at least: 6.0
-Tested up to: 6.9
-Stable tag: 5.4.8
-Requires PHP: 7.4
+Tested up to: 7.1
+Stable tag: 5.6.1
+Requires PHP: 8.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -152,6 +152,93 @@ Yes! Use arrow keys to navigate, ESC to close, and keyboard shortcuts for all co
 Meow Lightbox works great with translation plugins and multilingual setups.
 
 == Changelog ==
+
+= 5.6.1 (2026/09/04) =
+* Fix: Resolved a conflict with other plugins setting window.pswp that broke lightbox clicks.
+* Fix: Declared imageSize and disableCache before the REST early return.
+* Update: The License Issue badge now shows the actual reason instead of a generic label.
+* Update: Cached image URLs are cleared automatically when Perfect Images changes its CDN settings.
+* Update: Cleaned up unused imports, variables and indentation in the Meow Apps dashboard.
+* 🎵 Discuss with others about Meow Lightbox on [the Discord](https://discord.gg/bHDGh38).
+* 🌴 Keep us motivated with [a little review here](https://wordpress.org/support/plugin/meow-lightbox/reviews/). Thank you!
+* 🥰 If you want to help us, check our [Patreon](https://www.patreon.com/meowapps). Thank you!
+
+= 5.6.0 (2026/08/20) =
+* Add: Diagnostics tab that automatically detects REST API issues.
+* Update: Reworked the Meow Apps dashboard with a plugin board, AI site analysis and a bounded speed test.
+* Update: Minimum PHP requirement is now 8.1.
+* Update: Images added after page load are now detected with a mutation observer instead of timed re-rendering.
+* Fix: GPS coordinates and lens data are cached in post meta so third-party plugins no longer overwrite captions and descriptions.
+* Fix: 1px line appearing under the image in the lightbox.
+* Update: PhotoSwipe is now vendored in the plugin instead of pulled from npm, making it easier to debug and patch.
+
+= 5.5.9 (2026/07/30) =
+* Fix: EXIF filters now run on cached page data.
+* Fix: Download button only appears when a download link exists.
+* Fix: Added credentials and nonce to the regenerate image data request.
+
+= 5.5.8 (2026/06/28) =
+* Fix: Resolved an issue where gallery infinite scroll could get stuck in a load more loop.
+* Update: Removed placeholder image handling in the lightbox.
+* Add: Translations support for the lightbox interface with additional language coverage.
+* 🎵 Discuss with others about Meow Lightbox on [the Discord](https://discord.gg/bHDGh38).
+* 🌴 Keep us motivated with [a little review here](https://wordpress.org/support/plugin/meow-lightbox/reviews/). Thank you!
+* 🥰 If you want to help us, check our [Patreon](https://www.patreon.com/meowapps). Thank you!
+
+= 5.5.7 (2026/05/30) =
+* Update: Fullscreen is now a toolbar action, with "Start Fullscreen" available as a secondary option for mobile and desktop.
+* Update: Date and Time are now separate settings in EXIF metadata display.
+* Fix: Images without a lightbox ID but with a known cached URL now correctly load their metadata.
+* Update: Simplified and refactored EXIF display functions.
+
+= 5.5.6 (2026/05/07) =
+* Add: Dynamic aria-label updates for lightboxified images.
+* Update: Removed default titles from next and previous buttons.
+* Add: Internationalization support in lightbox components.
+* Fix: Sub-pixel flickers in the lightbox display.
+
+= 5.5.5 (2026/04/25) =
+* Update: Refreshed the welcome message screen with a new layout.
+* Update: Better UI/UX.
+
+= 5.5.4 (2026/04/19) =
+* Add: Question icon to the Tutorial button in the header.
+* Add: Support for JSON styling on Google Maps.
+* Update: Refactored output buffering logic.
+
+= 5.5.3 (2026/04/17) =
+* Fix: Resolved an issue where dynamic cache keys could exceed the WordPress transient name limit by using MD5 hashing.
+* Fix: Resolved an issue where scrolling with the mouse wheel on the Description field was not working correctly.
+* Add: Support for displaying EXIF data on Meow Gallery images without requiring REST calls, using a new dynamic fetch approach.
+* Add: A "Reset GPS" button in the Meow GPS widget, positioned below the coordinates for easy access.
+* Update: Improved support for float-format and inverse time offset GPS EXIF data.
+* 🎵 Discuss with others about Meow Lightbox on [the Discord](https://discord.gg/bHDGh38).
+* 🌴 Keep us motivated with [a little review here](https://wordpress.org/support/plugin/meow-lightbox/reviews/). Thank you!
+* 🥰 If you want to help us, check our [Patreon](https://www.patreon.com/meowapps). Thank you!
+
+= 5.5.1 (2026/03/09) =
+* Update: Improved image performance by using hardware-accelerated CSS on image elements.
+* Add: Added aria-label attributes to UI elements (accessibility for screen readers).
+* Fix: Corrected a configuration check in the bundled HTML parser library.
+* Update: Reorganized the "Features" options for a clearer layout.
+* Add: Added support for fullscreen mode to provide an immersive viewing experience.
+
+= 5.5.0 (2026/02/25) =
+* Add: New autoplay option for slideshows so galleries can play automatically.
+* Add: Support for rendering the lightbox inside a parent element.
+* Update: Orphaned media now reuses existing IDs for the same URL to avoid duplicate entries.
+* Fix: Hotfix to prevent server errors (500) when EXIF GPS data is not formatted as an array.
+* Update: Upgraded the DiDom library to v2 to resolve double-encoding issues.
+
+= 5.4.9 (2026/01/27) =
+* Fix: Improve shutter speed handling by converting string values to floats.
+* Fix: Speed up thumbnail loading by cleaning URLs before checking for related media attachments.
+* Fix: Ensure deep linking only opens after the page has fully rendered to prevent broken or partial views.
+* Update: Improve mobile and tablet detection by using the browser’s user agent.
+* Update: Allow Orphans to support custom width and height attributes.
+* 🎵 Discuss with others about Meow Lightbox on [the Discord](https://discord.gg/bHDGh38).
+* 🌴 Keep us motivated with [a little review here](https://wordpress.org/support/plugin/meow-lightbox/reviews/). Thank you!
+* 🥰 If you want to help us, check our [Patreon](https://www.patreon.com/meowapps). Thank you!
 
 = 5.4.8 (2026/01/05) =
 * Update: Improve image matching and lazy loading by using data-src instead of src when available.  
