@@ -141,7 +141,7 @@
 .elfinder-spinner {
     width: 14px;
     height: 14px;
-    background: url("/wp-content/plugins/wp-file-manager/lib/img/spinner-mini.gif") center center no-repeat;
+    background: url("https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/spinner-mini.gif") center center no-repeat;
     margin: 0 5px;
     display: inline-block;
     vertical-align: middle;
@@ -241,7 +241,7 @@
     left: 10px;
     bottom: 8%;
     margin-top: -15px;
-    background: url("/wp-content/plugins/wp-file-manager/lib/img/dialogs.png") 0 0 no-repeat;
+    background: url("https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/dialogs.png") 0 0 no-repeat;
 }
 
 .elfinder-rtl .elfinder-dialog-icon {
@@ -363,7 +363,7 @@
 .elfinder-notify-progress {
     width: 100%;
     height: 8px;
-    background: url(/wp-content/plugins/wp-file-manager/lib/img/progress.gif) center center repeat-x;
+    background: url(https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/progress.gif) center center repeat-x;
 }
 
 .elfinder-notify-progressbar, .elfinder-notify-progress {

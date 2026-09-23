@@ -16,7 +16,7 @@
 .elfinder .elfinder-dialog .ui-dialog-titlebar-close,
 .elfinder .elfinder-dialog .elfinder-titlebar-minimize,
 .elfinder .elfinder-dialog .elfinder-titlebar-full{
-  background: url('/wp-content/plugins/wp-file-manager/lib/themes/windows-10/images/win_10_sprite_icon.png');
+  background: url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/themes/windows-10/images/win_10_sprite_icon.png');
   right: 0;
   border-radius: 0;
   margin-top: -13px; 

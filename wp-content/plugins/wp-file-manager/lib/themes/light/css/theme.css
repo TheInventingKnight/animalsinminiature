@@ -4,35 +4,35 @@
  */
 
 /* Reset */
-@import url('/wp-content/plugins/wp-file-manager/lib/themes/light/css/reset.css');
+@import url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/themes/light/css/reset.css');
 
 /* Google Fonts */
 @import url('//fonts.googleapis.com/css?family=Open+Sans:300');
 
 /* Main features of the whole UI */
-@import url('/wp-content/plugins/wp-file-manager/lib/themes/light/css/main.css');
+@import url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/themes/light/css/main.css');
 
 /* Icons */
-@import url('/wp-content/plugins/wp-file-manager/lib/themes/light/css/icons.css');
+@import url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/themes/light/css/icons.css');
 
 /* Toolbar (top panel) */
-@import url('/wp-content/plugins/wp-file-manager/lib/themes/light/css/toolbar.css');
+@import url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/themes/light/css/toolbar.css');
 
 /* Navbar (left panel) */
-@import url('/wp-content/plugins/wp-file-manager/lib/themes/light/css/navbar.css');
+@import url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/themes/light/css/navbar.css');
 
 /* Views (List and Thumbnail) */
-@import url('/wp-content/plugins/wp-file-manager/lib/themes/light/css/view-list.css');
-@import url('/wp-content/plugins/wp-file-manager/lib/themes/light/css/view-thumbnail.css');
+@import url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/themes/light/css/view-list.css');
+@import url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/themes/light/css/view-thumbnail.css');
 
 /* Context menu */
-@import url('/wp-content/plugins/wp-file-manager/lib/themes/light/css/contextmenu.css');
+@import url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/themes/light/css/contextmenu.css');
 
 /* (Modal) Dialogs */
-@import url('/wp-content/plugins/wp-file-manager/lib/themes/light/css/dialog.css');
+@import url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/themes/light/css/dialog.css');
 
 /* Status Bar */
-@import url('/wp-content/plugins/wp-file-manager/lib/themes/light/css/statusbar.css');
+@import url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/themes/light/css/statusbar.css');
 
 .ui-widget-content.elfinder-edit-editor{
 	width:auto;

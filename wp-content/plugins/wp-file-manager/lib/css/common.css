@@ -5,11 +5,11 @@
 /* for old jQuery UI */
 @font-face {
     font-family: 'Noto Sans';
-    src: url('/wp-content/plugins/wp-file-manager/lib/fonts/notosans/NotoSans-Regular.eot');
-    src: url('/wp-content/plugins/wp-file-manager/lib/fonts/notosans/NotoSans-Regular.eot#iefix') format('embedded-opentype'),
-        url('/wp-content/plugins/wp-file-manager/lib/fonts/notosans/NotoSans-Regular.woff2') format('woff2'),
-        url('/wp-content/plugins/wp-file-manager/lib/fonts/notosans/NotoSans-Regular.woff') format('woff'),
-        url('/wp-content/plugins/wp-file-manager/lib/fonts/notosans/NotoSans-Regular.ttf') format('truetype');
+    src: url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/fonts/notosans/NotoSans-Regular.eot');
+    src: url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/fonts/notosans/NotoSans-Regular.eot#iefix') format('embedded-opentype'),
+        url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/fonts/notosans/NotoSans-Regular.woff2') format('woff2'),
+        url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/fonts/notosans/NotoSans-Regular.woff') format('woff'),
+        url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/fonts/notosans/NotoSans-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -91,7 +91,7 @@ div.elfinder {
     height: 3px;
     content: '';
     left: 0;
-    background-image: url(/wp-content/plugins/wp-file-manager/lib/img/progress.gif);
+    background-image: url(https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/progress.gif);
     opacity: .6;
     pointer-events: none;
 }
@@ -130,7 +130,7 @@ div.elfinder {
     position: absolute;
     width: 16px;
     height: 16px;
-    background-image: url(/wp-content/plugins/wp-file-manager/lib/img/toolbar.png);
+    background-image: url(https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/toolbar.png);
     background-repeat: no-repeat;
     background-position: 0 -528px;
 }
@@ -187,7 +187,7 @@ div.elfinder {
     height: 16px;
     left: 42px;
     top: 60px;
-    background: url('/wp-content/plugins/wp-file-manager/lib/img/toolbar.png') 0 -96px no-repeat;
+    background: url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/toolbar.png') 0 -96px no-repeat;
     display: block;
 }
 

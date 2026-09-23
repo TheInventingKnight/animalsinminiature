@@ -1,105 +1,105 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/main-sitemap.xsl"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://animalsinminiature.ca/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>/</loc>
+		<loc>https://animalsinminiature.ca/</loc>
 		<lastmod>2026-01-18T00:06:34+00:00</lastmod>
 	</url>
 	<url>
-		<loc>/about/</loc>
+		<loc>https://animalsinminiature.ca/about/</loc>
 		<lastmod>2026-01-18T00:06:34+00:00</lastmod>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/12/bison-with-tools.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/12/bison-with-tools.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/12/Spaniel-Sculpted.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/12/Spaniel-Sculpted.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/12/Spaniel-Painted.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/12/Spaniel-Painted.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/12/Spaniel-Finished.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/12/Spaniel-Finished.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/12/Cat-Sculpture-for-website-.png</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/12/Cat-Sculpture-for-website-.png</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>/404-2/</loc>
+		<loc>https://animalsinminiature.ca/404-2/</loc>
 		<lastmod>2026-01-17T22:24:11+00:00</lastmod>
 	</url>
 	<url>
-		<loc>/photo-gallery/</loc>
+		<loc>https://animalsinminiature.ca/photo-gallery/</loc>
 		<lastmod>2025-12-10T03:43:01+00:00</lastmod>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/cardinal.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/cardinal.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/standard-poodle.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/standard-poodle.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/leaping-sifaka-lemur.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/leaping-sifaka-lemur.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/baltimore-oriole.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/baltimore-oriole.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/112-scale-bluejay.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/112-scale-bluejay.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/112-scale-blue-jay.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/112-scale-blue-jay.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/112-scale-robin-and-nest.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/112-scale-robin-and-nest.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/miniature-blue-jay.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/miniature-blue-jay.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/blue-lynx-ragdoll-cat.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/blue-lynx-ragdoll-cat.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/holland-lop-rabbit.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/holland-lop-rabbit.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/16-scale-american-robin.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/16-scale-american-robin.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/baby-chicks.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/baby-chicks.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/light-sussex-hens-and-chicks.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/light-sussex-hens-and-chicks.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/plymouth-rock-hen.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/plymouth-rock-hen.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/austrolorp-hen.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/austrolorp-hen.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/112-bernese-mountain-dog-with-hand-made-dog-cart-and-harness.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/112-bernese-mountain-dog-with-hand-made-dog-cart-and-harness.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/cavalier-king-charles-spaniels.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/cavalier-king-charles-spaniels.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/cavalier-king-charles-spaniel.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/cavalier-king-charles-spaniel.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/112-scale-american-bison.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/112-scale-american-bison.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/blue-jay-and-blue-lynx-ragdoll-cat.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/blue-jay-and-blue-lynx-ragdoll-cat.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/11/sleepy-kitty-tabby-and-white-cat.jpg</image:loc>
+			<image:loc>https://animalsinminiature.ca/wp-content/uploads/2025/11/sleepy-kitty-tabby-and-white-cat.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>/contact/</loc>
+		<loc>https://animalsinminiature.ca/contact/</loc>
 		<lastmod>2025-12-09T21:35:43+00:00</lastmod>
 	</url>
 	<url>
-		<loc>/unsubscribe/</loc>
+		<loc>https://animalsinminiature.ca/unsubscribe/</loc>
 		<lastmod>2025-12-09T20:07:32+00:00</lastmod>
 	</url>
 </urlset>

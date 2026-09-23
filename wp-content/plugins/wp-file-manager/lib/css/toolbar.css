@@ -93,7 +93,7 @@
     width: 16px;
     height: 16px;
     display: inline-block;
-    background: url('/wp-content/plugins/wp-file-manager/lib/img/toolbar.png') no-repeat;
+    background: url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/toolbar.png') no-repeat;
 }
 
 .elfinder-button-text {
@@ -390,7 +390,7 @@
 
 /* button with spinner icon */
 .elfinder-button-icon-spinner {
-    background: url("/wp-content/plugins/wp-file-manager/lib/img/spinner-mini.gif") center center no-repeat;
+    background: url("https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/spinner-mini.gif") center center no-repeat;
 }
 
 /* menu */
@@ -610,11 +610,11 @@
 
 /* Theme Search Fix */
 .elfinder-toolbar .elfinder-button-search .ui-icon-search{ 
-    background-image: url('/wp-content/plugins/wp-file-manager/lib/img/black-search.png');
+    background-image: url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/black-search.png');
     background-position: 7px 3px;
 } 
 .elfinder-toolbar .elfinder-button-search .ui-icon-close{
-    background-image: url('/wp-content/plugins/wp-file-manager/lib/img/black-close.png');
+    background-image: url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/black-close.png');
     background-position: 2px 3px;
 }
 

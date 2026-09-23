@@ -76,52 +76,52 @@
 
 /* root icon of each volume */
 .elfinder-navbar-root-local.elfinder-contextmenu-icon {
-    background-image: url("/wp-content/plugins/wp-file-manager/lib/img/volume_icon_local.svg");
+    background-image: url("https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/volume_icon_local.svg");
     background-size: contain;
 }
 
 .elfinder-navbar-root-trash.elfinder-contextmenu-icon {
-    background-image: url("/wp-content/plugins/wp-file-manager/lib/img/volume_icon_trash.svg");
+    background-image: url("https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/volume_icon_trash.svg");
     background-size: contain;
 }
 
 .elfinder-navbar-root-ftp.elfinder-contextmenu-icon {
-    background-image: url("/wp-content/plugins/wp-file-manager/lib/img/volume_icon_ftp.svg");
+    background-image: url("https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/volume_icon_ftp.svg");
     background-size: contain;
 }
 
 .elfinder-navbar-root-sql.elfinder-contextmenu-icon {
-    background-image: url("/wp-content/plugins/wp-file-manager/lib/img/volume_icon_sql.svg");
+    background-image: url("https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/volume_icon_sql.svg");
     background-size: contain;
 }
 
 .elfinder-navbar-root-dropbox.elfinder-contextmenu-icon {
-    background-image: url("/wp-content/plugins/wp-file-manager/lib/img/volume_icon_dropbox.svg");
+    background-image: url("https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/volume_icon_dropbox.svg");
     background-size: contain;
 }
 
 .elfinder-navbar-root-googledrive.elfinder-contextmenu-icon {
-    background-image: url("/wp-content/plugins/wp-file-manager/lib/img/volume_icon_googledrive.svg");
+    background-image: url("https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/volume_icon_googledrive.svg");
     background-size: contain;
 }
 
 .elfinder-navbar-root-onedrive.elfinder-contextmenu-icon {
-    background-image: url("/wp-content/plugins/wp-file-manager/lib/img/volume_icon_onedrive.svg");
+    background-image: url("https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/volume_icon_onedrive.svg");
     background-size: contain;
 }
 
 .elfinder-navbar-root-box.elfinder-contextmenu-icon {
-    background-image: url("/wp-content/plugins/wp-file-manager/lib/img/volume_icon_box.svg");
+    background-image: url("https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/volume_icon_box.svg");
     background-size: contain;
 }
 
 .elfinder-navbar-root-zip.elfinder-contextmenu-icon {
-    background-image: url("/wp-content/plugins/wp-file-manager/lib/img/volume_icon_zip.svg");
+    background-image: url("https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/volume_icon_zip.svg");
     background-size: contain;
 }
 
 .elfinder-navbar-root-network.elfinder-contextmenu-icon {
-    background-image: url("/wp-content/plugins/wp-file-manager/lib/img/volume_icon_network.svg");
+    background-image: url("https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/volume_icon_network.svg");
     background-size: contain;
 }
 
@@ -195,7 +195,7 @@
 .elfinder .elfinder-contextmenu-arrow {
     width: 16px;
     height: 16px;
-    background: url('/wp-content/plugins/wp-file-manager/lib/img/arrows-normal.png') 5px 4px no-repeat;
+    background: url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/arrows-normal.png') 5px 4px no-repeat;
 }
 
 /* arrow icon in rtl/ltr enviroment */
@@ -235,7 +235,7 @@
 
 /* for CSS style priority to ui-state-disabled - "background-image: none" */
 .elfinder .elfinder-contextmenu-item .elfinder-button-icon.ui-state-disabled {
-    background-image: url('/wp-content/plugins/wp-file-manager/lib/img/toolbar.png');
+    background-image: url('https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/img/toolbar.png');
 }
 
 .elfinder .elfinder-contextmenu-ltr .elfinder-contextmenu-extra-icon{ display:none !important; }

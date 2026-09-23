@@ -22,10 +22,10 @@
   /* */
 }
 .elfinder-button-icon.elfinder-button-icon-fullscreen {
-	background: url(/wp-content/plugins/wp-file-manager/lib/themes/light/images/16px/fullscreen.svg);
+	background: url(https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/themes/light/images/16px/fullscreen.svg);
 	background-repeat:no-repeat;
 background-size: 16px;
 }
 .elfinder-cwd-view-list td .elfinder-cwd-icon {
-	background-image: url(/wp-content/plugins/wp-file-manager/lib/themes/light/images/icons-small_new.png);
+	background-image: url(https://animalsinminiature.ca/wp-content/plugins/wp-file-manager/lib/themes/light/images/icons-small_new.png);
 }
